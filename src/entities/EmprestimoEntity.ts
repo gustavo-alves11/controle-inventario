@@ -1,10 +1,10 @@
 import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import EnumStatus from "../enum/EnumStatus";
-import devolucaoEntity from "./devolucaoEntity";
-import retiradaEntity from "./retiradaEntity";
-import produtosEntity from "./produtosEntity";
-import userEntity from "./userEntity";
-import adminEntity from "./adminEntity";
+import devolucaoEntity from "./DevolucaoEntity";
+import retiradaEntity from "./RetiradaEntity";
+import produtosEntity from "./ProdutoEntity";
+import userEntity from "./UserEntity";
+import adminEntity from "./AdminEntity";
 
 @Entity()
 export default class emprestimoEntity {

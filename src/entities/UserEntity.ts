@@ -1,9 +1,9 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import emprestimoEntity from "./emprestimoEntity";
+import emprestimoEntity from "./EmprestimoEntity";
 
 
 @Entity()
-export default class adminEntity {
+export default class userEntity {
   @PrimaryGeneratedColumn()
   id!: number; 
   @Column()
@@ -12,7 +12,7 @@ export default class adminEntity {
   senha: string;
   @Column()
   cpf: string;
-  @OneToMany(()=> emprestimoEntity, (emprestimo) => emprestimo.admin)
+  @OneToMany(()=> emprestimoEntity, (emprestimo) => emprestimo.usuario)
   emprestimo: emprestimoEntity
  
   constructor(

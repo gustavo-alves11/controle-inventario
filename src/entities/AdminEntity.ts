@@ -1,18 +1,18 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import emprestimoEntity from "./emprestimoEntity";
+import emprestimoEntity from "./EmprestimoEntity";
 
 
 @Entity()
-export default class userEntity {
+export default class adminEntity {
   @PrimaryGeneratedColumn()
-  id!: number; 
+  id!: number;  // o ! significa que não vai ser inicializado agora
   @Column()
   nome: string;
   @Column()
   senha: string;
   @Column()
   cpf: string;
-  @OneToMany(()=> emprestimoEntity, (emprestimo) => emprestimo.usuario)
+  @OneToMany(()=> emprestimoEntity, (emprestimo) => emprestimo.admin)
   emprestimo: emprestimoEntity
  
   constructor(
